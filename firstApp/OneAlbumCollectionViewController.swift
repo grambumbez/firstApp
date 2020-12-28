@@ -9,42 +9,28 @@ import UIKit
 
 
 class OneAlbumCollectionViewController: UICollectionViewController {
-
-    var album: Albums!
     
+    var album: Albums!
+    let spacing: CGFloat = 20
+    let photoPerRow: CGFloat = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         if album.nameAlbums == "Альбом собак" {
             return dogPhoto.count
         } else {
             return catPhoto.count
         }
-        
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoViewCell
         //cell.backgroundColor = .black
@@ -71,19 +57,18 @@ class OneAlbumCollectionViewController: UICollectionViewController {
 }
 extension OneAlbumCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let photoPerRow: CGFloat = 2
-        let paddingWidth = 20 * (photoPerRow + 1)
+        let paddingWidth = spacing * (photoPerRow + 1)
         let avaiLableWidth = collectionView.frame.width - paddingWidth
         let widthPerItem = avaiLableWidth/photoPerRow
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return spacing
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return spacing
     }
 }

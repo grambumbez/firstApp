@@ -5,8 +5,9 @@ target 'firstApp' do
   # Comment the next line if you don't want to use dynamic frameworks
  
 pod 'RxSwift', '6.0.0-rc.1'
-    pod 'RxCocoa', '6.0.0-rc.1'
-pod 'DLRadioButton', '~> 1.4'
+pod 'RxCocoa', '6.0.0-rc.1'
+pod 'Alamofire', '~> 5.2'
+pod 'UnsplashPhotoPicker', '~> 1.1.1'
 
   # Pods for firstApp
 

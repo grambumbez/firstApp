@@ -9,13 +9,6 @@ import UIKit
 
 class AlbumsTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var imgAlbumLabel: UILabel!
+    @IBOutlet weak var photoAlbumImg: UIImageView!
     @IBOutlet weak var nameAlbumLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 }

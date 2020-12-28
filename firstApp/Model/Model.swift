@@ -6,40 +6,26 @@
 //
 
 import Foundation
+import Alamofire
 
-var articles: [Article] = []
+var newsResponse: NewsApi?
 
 func loadNews(completionHandler: (()-> Void)?) {
-    guard let url = URL(string: "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fb85741bd56f49a59a1bea3d174959ff") else {return}
-    print(url)
-    let session = URLSession(configuration: .default)
-    let downloadTask = session.downloadTask(with: url) { (urlFile, responce, error) in
-        if urlFile != nil {
-            let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true) [0]+"/data.json"
-            let urlPath = URL(fileURLWithPath: path)
-            try? FileManager.default.copyItem(at: urlFile!, to: urlPath)
-            print(urlPath)
-            parsePosts()
-            completionHandler?()
-        }
+    let urlString = "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fb85741bd56f49a59a1bea3d174959ff"
+    AF.request(urlString).response { response in
+        guard let data = response.data else { return }
+        parseArticle(data: data)
+        completionHandler?()
     }
-    downloadTask.resume()
 }
-
-func parsePosts() {
-    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true) [0]+"/data.json"
-    let urlPath = URL(fileURLWithPath: path)
-    
-    guard let data = try? Data(contentsOf: urlPath) else {return}
-    guard let rootDictionary = try? (JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>) else {return}
-    guard let array = rootDictionary["articles"] as? [Dictionary<String, Any>] else {return}
-    var returnArray: [Article] = []
-    
-    for dict in array {
-        let newArticle = Article(dictionary: dict)
-        returnArray.append(newArticle)
+func parseArticle(data: Data) -> [Article] {
+    do {
+        newsResponse = try JSONDecoder().decode(NewsApi.self, from: data)
+    } catch {
+        print("Failed to decode JSON: \(error)")
+        return []
     }
-    articles = returnArray
+    return newsResponse?.articles ?? []
 }
 
 struct Albums {

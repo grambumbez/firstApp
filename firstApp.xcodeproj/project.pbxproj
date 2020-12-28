@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		3AEA4AB3C13A8FD0B3FDFA7F /* libPods-firstApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2C503600D22002E411A5E4 /* libPods-firstApp.a */; };
 		3C2F62252567CBE900AFD31E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F62242567CBE900AFD31E /* Model.swift */; };
-		3C3DE08F2555E58D00412FBF /* libDLRadioButton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3DE08E2555E58D00412FBF /* libDLRadioButton.a */; };
 		3C3DE09725572A0C00412FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3DE09625572A0C00412FBF /* Assets.xcassets */; };
+		3C507D8E259924A100EA1188 /* libUnsplashPhotoPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C507D8D259924A100EA1188 /* libUnsplashPhotoPicker.a */; };
 		3C52100A2553FA4400ED9196 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5210092553FA4400ED9196 /* PageViewController.swift */; };
 		3C52101225552A1C00ED9196 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52101125552A1C00ED9196 /* ThirdViewController.swift */; };
 		3C52102325552F1F00ED9196 /* libRxCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C52102025552F1F00ED9196 /* libRxCocoa.a */; };
@@ -32,6 +32,7 @@
 		3CB7463025506458005FA2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7462E25506458005FA2A1 /* LaunchScreen.storyboard */; };
 		3CB7463B25506459005FA2A1 /* firstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7463A25506459005FA2A1 /* firstAppTests.swift */; };
 		3CB7464625506459005FA2A1 /* firstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7464525506459005FA2A1 /* firstAppUITests.swift */; };
+		3CC50678258FC71800F0318B /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC50677258FC71800F0318B /* libAlamofire.a */; };
 		56A0173446D3CF94B46C4B03 /* libPods-firstAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D5279CB11393933B4F2FD /* libPods-firstAppTests.a */; };
 		ADAA5911DF6405A73F5119BC /* libPods-firstApp-firstAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0616053018431B4051FD45 /* libPods-firstApp-firstAppUITests.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		3C2F62242567CBE900AFD31E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3C3DE08E2555E58D00412FBF /* libDLRadioButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDLRadioButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3DE09625572A0C00412FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C507D8D259924A100EA1188 /* libUnsplashPhotoPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libUnsplashPhotoPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5210092553FA4400ED9196 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3C52101125552A1C00ED9196 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		3C52102025552F1F00ED9196 /* libRxCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRxCocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 		3CB7464125506459005FA2A1 /* firstAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firstAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB7464525506459005FA2A1 /* firstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstAppUITests.swift; sourceTree = "<group>"; };
 		3CB7464725506459005FA2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC50677258FC71800F0318B /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41589F99D6FD3F4C9BC973C4 /* Pods-firstApp-firstAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstApp-firstAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-firstApp-firstAppUITests/Pods-firstApp-firstAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		478D5279CB11393933B4F2FD /* libPods-firstAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-firstAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67353B7E5BCF44BFCDDFDA8F /* Pods-firstApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstApp.release.xcconfig"; path = "Target Support Files/Pods-firstApp/Pods-firstApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +105,9 @@
 			files = (
 				3AEA4AB3C13A8FD0B3FDFA7F /* libPods-firstApp.a in Frameworks */,
 				3C52102525552F1F00ED9196 /* libRxSwift.a in Frameworks */,
-				3C3DE08F2555E58D00412FBF /* libDLRadioButton.a in Frameworks */,
+				3C507D8E259924A100EA1188 /* libUnsplashPhotoPicker.a in Frameworks */,
 				3C52102325552F1F00ED9196 /* libRxCocoa.a in Frameworks */,
+				3CC50678258FC71800F0318B /* libAlamofire.a in Frameworks */,
 				3C52102425552F1F00ED9196 /* libRxRelay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +221,8 @@
 		E8BB3BBCE0DD1B6EEC686131 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C507D8D259924A100EA1188 /* libUnsplashPhotoPicker.a */,
+				3CC50677258FC71800F0318B /* libAlamofire.a */,
 				3C3DE08E2555E58D00412FBF /* libDLRadioButton.a */,
 				3C52102025552F1F00ED9196 /* libRxCocoa.a */,
 				3C52102125552F1F00ED9196 /* libRxRelay.a */,
@@ -550,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -605,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -631,7 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.habibullin.firstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -651,7 +657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.habibullin.firstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

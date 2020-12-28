@@ -18,7 +18,6 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         goButton.layer.cornerRadius = 6
-        
         if UserDefaults.standard.bool(forKey: "stopWelcomePage") {
             self.checkBox.isSelected = UserDefaults.standard.bool(forKey: "stopWelcomePage")
         }
@@ -27,7 +26,7 @@ class ThirdViewController: UIViewController {
             guard let postVC = self.storyboard?.instantiateViewController(identifier: "BarViewController") else {return}
             self.navigationController?.pushViewController(postVC, animated: true)
         }).disposed(by: disposeBag)
-}
+    }
     @IBAction func checkBoxButton(_ sender: Any) {
         self.checkBox.isSelected = !self.checkBox.isSelected
         UserDefaults.standard.set(checkBox.isSelected, forKey: "stopWelcomePage")

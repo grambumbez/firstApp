@@ -7,18 +7,28 @@
 
 import Foundation
 
-struct Article {
+class NewsApi: Codable {
+    var status: String
+    var totalResults: Int
+    var articles: [Article]
+}
+class Article: Codable {
     var author: String
     var title: String
     var description: String
+    //    var url: String
+    var urlToImage: String
     var publishedAt: String
     var content: String
     
-    init(dictionary: Dictionary<String, Any>) {
-        author = dictionary["author"] as? String ?? ""
-        title = dictionary["title"] as? String ?? ""
-        description = dictionary["description"] as? String ?? ""
-        publishedAt = dictionary["publishedAt"] as? String ?? ""
-        content = dictionary["content"] as? String ?? ""
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case author = "author"
+        case description = "description"
+        //        case url = "url"
+        case urlToImage = "urlToImage"
+        case publishedAt = "publishedAt"
+        case content = "content"
     }
 }
+
