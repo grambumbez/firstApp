@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoZoomCell" id="gTV-IL-0wX" customClass="PhotoZoomCell" customModule="firstApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="209" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSP-sK-HvW">
+                        <rect key="frame" x="0.0" y="0.0" width="209" height="181"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4sq-uV-4qk">
+                                <rect key="frame" x="0.0" y="0.0" width="209" height="181"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" secondItem="4sq-uV-4qk" secondAttribute="height" id="Dgp-Qm-ffx"/>
+                            <constraint firstItem="4sq-uV-4qk" firstAttribute="trailing" secondItem="lMk-MX-gFi" secondAttribute="trailing" id="HiN-RC-bVx"/>
+                            <constraint firstAttribute="width" secondItem="4sq-uV-4qk" secondAttribute="width" id="OH0-dP-9fo"/>
+                            <constraint firstItem="4sq-uV-4qk" firstAttribute="leading" secondItem="lMk-MX-gFi" secondAttribute="leading" id="SSF-hW-mGy"/>
+                            <constraint firstItem="4sq-uV-4qk" firstAttribute="top" secondItem="lMk-MX-gFi" secondAttribute="top" id="hyd-ES-yc3"/>
+                            <constraint firstItem="4sq-uV-4qk" firstAttribute="bottom" secondItem="lMk-MX-gFi" secondAttribute="bottom" id="kVx-Jr-FWj"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="RrL-xf-iI6"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="lMk-MX-gFi"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RSP-sK-HvW" secondAttribute="bottom" id="DkA-wp-epV"/>
+                <constraint firstItem="RSP-sK-HvW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="If3-gp-lhW"/>
+                <constraint firstAttribute="trailing" secondItem="RSP-sK-HvW" secondAttribute="trailing" id="J9n-hd-MW4"/>
+                <constraint firstItem="RSP-sK-HvW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KKT-M2-LS0"/>
+            </constraints>
+            <size key="customSize" width="209" height="181"/>
+            <connections>
+                <outlet property="photoImage" destination="4sq-uV-4qk" id="n4O-bb-atl"/>
+                <outlet property="photoZoomScroll" destination="RSP-sK-HvW" id="Noo-FH-59w"/>
+            </connections>
+            <point key="canvasLocation" x="-34.057971014492757" y="43.861607142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -11,8 +11,10 @@ import UIKit
 class OneAlbumCollectionViewController: UICollectionViewController {
     
     var album: Albums!
-    let spacing: CGFloat = 20
-    let photoPerRow: CGFloat = 2
+    let spacing: CGFloat = 2
+    let photoPerRow: CGFloat = 3
+    
+    let photoCat = catPhoto
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,25 +35,28 @@ class OneAlbumCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoViewCell
-        //cell.backgroundColor = .black
         if album.nameAlbums == "Альбом собак" {
             let imageName = dogPhoto[indexPath.item]
             let image = UIImage(named: imageName)
             cell.dogImageView.image = image
         } else {
-            let imageCatName = catPhoto[indexPath.item]
-            let image2 = UIImage(named: imageCatName)
+            let imageName = catPhoto[indexPath.item]
+            let image2 = UIImage(named: imageName)
             cell.dogImageView.image = image2
         }
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToPhoto" {
-            let cell = sender as! PhotoViewCell
-            (segue.destination as! OnePhotoViewController).oneImage = cell.dogImageView.image
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "ZoomPhotoView") as! PhotoZoomView
+        if album.nameAlbums == "Альбом собак" {
+            vc.photo = dogPhoto
+        } else {
+            vc.photo = catPhoto
         }
+        vc.indexPath = indexPath
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

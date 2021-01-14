@@ -17,7 +17,6 @@ class PostViewController: UITableViewController {
             }
         }
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -30,6 +29,17 @@ class PostViewController: UITableViewController {
         let article = newsResponse?.articles[indexPath.row]
         cell.nameLabel.text = article?.title
         cell.authorLabel.text = article?.author
+        if let test = URL(string: article?.urlToImage ?? "No Photo") {
+            DispatchQueue.global(qos: .utility).async {
+                if let data = try? Data(contentsOf: test) {
+                    DispatchQueue.main.async {
+                        let img = UIImage(data: data)
+                        cell.postImageView.image = img
+                        cell.postImageView.layer.cornerRadius = 5
+                    }
+                }
+            }
+        }
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -37,7 +47,7 @@ class PostViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToOnePost"{
-            (segue.destination as? OnePostViewController)?.article = newsResponse?.articles[tableView.indexPathForSelectedRow!.row]
+            (segue.destination as? NewsView)?.article = newsResponse?.articles[tableView.indexPathForSelectedRow!.row]
         }
     }
 }

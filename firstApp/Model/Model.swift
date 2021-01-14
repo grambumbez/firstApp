@@ -34,5 +34,5 @@ struct Albums {
 }
 
 let dogPhoto: Array = ["dog1","dog2","dog3","dog4","dog5","dog6","dog7","dog8"]
-let catPhoto: Array = ["cat1","cat2","cat3","cat4","cat5","cat6"]
+let catPhoto: Array = ["cat1","cat2","cat3","cat4","cat5","cat6", "cat7"]
 

@@ -13,7 +13,7 @@ class AlbumsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.lightGray
+        
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -26,6 +26,7 @@ class AlbumsTableViewController: UITableViewController {
         let obj = array[indexPath.row]
         cell.nameAlbumLabel.text = obj.nameAlbums
         cell.photoAlbumImg.image = UIImage(named: obj.imgAlbum)
+        cell.photoAlbumImg.layer.cornerRadius = 7
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,12 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-hh-MIe">
-                                <rect key="frame" x="0.0" y="154" width="414" height="367"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-hh-MIe">
+                                <rect key="frame" x="0.0" y="156.33333333333334" width="414" height="362.66666666666663"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageReference key="image" image="newspaper.fill" catalog="system" symbolScale="small" renderingMode="template"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RUQ-hh-MIe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5bM-e4-0Oz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RUQ-hh-MIe" secondAttribute="bottom" constant="215" id="aVm-th-P5a"/>
@@ -36,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="1216" height="912"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
     </resources>
 </document>
