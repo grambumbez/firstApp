@@ -30,14 +30,10 @@ class PostViewController: UITableViewController {
         cell.nameLabel.text = article?.title
         cell.authorLabel.text = article?.author
         if let test = URL(string: article?.urlToImage ?? "No Photo") {
-            DispatchQueue.global(qos: .utility).async {
-                if let data = try? Data(contentsOf: test) {
-                    DispatchQueue.main.async {
-                        let img = UIImage(data: data)
-                        cell.postImageView.image = img
-                        cell.postImageView.layer.cornerRadius = 5
-                    }
-                }
+            if let data = try? Data(contentsOf: test) {
+                let img = UIImage(data: data)
+                cell.postImageView.image = img
+                cell.postImageView.layer.cornerRadius = 5
             }
         }
         return cell

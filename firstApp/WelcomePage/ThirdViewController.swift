@@ -21,11 +21,10 @@ class ThirdViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: "stopWelcomePage") {
             self.checkBox.isSelected = UserDefaults.standard.bool(forKey: "stopWelcomePage")
         }
-        
-        goButton.rx.tap.subscribe(onNext: {
-            guard let postVC = self.storyboard?.instantiateViewController(identifier: "BarViewController") else {return}
-            self.navigationController?.pushViewController(postVC, animated: true)
-        }).disposed(by: disposeBag)
+    }
+    @IBAction func goPostButton(_ sender: UIButton) {
+        guard let postVC = self.storyboard?.instantiateViewController(identifier: "BarViewController") else {return}
+        self.navigationController?.pushViewController(postVC, animated: true)
     }
     @IBAction func checkBoxButton(_ sender: Any) {
         self.checkBox.isSelected = !self.checkBox.isSelected

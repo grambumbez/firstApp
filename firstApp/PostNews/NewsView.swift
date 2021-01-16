@@ -26,7 +26,7 @@ class NewsView: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         guard let articleURL = article?.url else {return}
         if let postURL = URL(string: articleURL) {
-            DispatchQueue.global(qos: .utility).async {
+            DispatchQueue.global(qos: .userInitiated).async {
                 AF.request(postURL).response {response in
                     if let web = response.request {
                         DispatchQueue.main.async {

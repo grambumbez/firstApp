@@ -123,6 +123,9 @@
                                 <state key="normal" title="Начать">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goPostButton:" destination="pUM-Cv-LY1" eventType="touchUpInside" id="S8g-4M-LEz"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="IeK-xG-4yb">
                                 <rect key="frame" x="40" y="707" width="334" height="35"/>
@@ -473,7 +476,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="y6W-Tl-68l"/>
                     <connections>
-                        <segue destination="ERj-ud-bVt" kind="show" id="bP4-r0-Pqf"/>
+                        <segue destination="ERj-ud-bVt" kind="show" identifier="" id="bP4-r0-Pqf"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3N-Aj-A4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
