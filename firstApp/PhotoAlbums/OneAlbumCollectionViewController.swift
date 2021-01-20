@@ -11,10 +11,6 @@ import UIKit
 class OneAlbumCollectionViewController: UICollectionViewController {
     
     var album: Albums!
-    let spacing: CGFloat = 2
-    let photoPerRow: CGFloat = 3
-    
-    let photoCat = catPhoto
     
     override func viewDidLoad() {
         super.viewDidLoad()

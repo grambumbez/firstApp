@@ -11,9 +11,7 @@ class PhotoZoomView: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var photo: Array<String>?
-    var countCells: CGFloat = 1
     var indexPath: IndexPath!
-    let identifire = "PhotoZoomCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -32,6 +32,7 @@
 		3CB7463025506458005FA2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7462E25506458005FA2A1 /* LaunchScreen.storyboard */; };
 		3CB7463B25506459005FA2A1 /* firstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7463A25506459005FA2A1 /* firstAppTests.swift */; };
 		3CB7464625506459005FA2A1 /* firstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7464525506459005FA2A1 /* firstAppUITests.swift */; };
+		3CBD2DFC25B5EC9700DB1295 /* SupportFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD2DFB25B5EC9700DB1295 /* SupportFile.swift */; };
 		3CC12866259C9D4B0041C6F2 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC12865259C9D4B0041C6F2 /* NewsView.swift */; };
 		3CC50678258FC71800F0318B /* libAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC50677258FC71800F0318B /* libAlamofire.a */; };
 		56A0173446D3CF94B46C4B03 /* libPods-firstAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D5279CB11393933B4F2FD /* libPods-firstAppTests.a */; };
@@ -87,6 +88,7 @@
 		3CB7464125506459005FA2A1 /* firstAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firstAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB7464525506459005FA2A1 /* firstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstAppUITests.swift; sourceTree = "<group>"; };
 		3CB7464725506459005FA2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CBD2DFB25B5EC9700DB1295 /* SupportFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFile.swift; sourceTree = "<group>"; };
 		3CC12865259C9D4B0041C6F2 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		3CC50677258FC71800F0318B /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41589F99D6FD3F4C9BC973C4 /* Pods-firstApp-firstAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstApp-firstAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-firstApp-firstAppUITests/Pods-firstApp-firstAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				3C762209256E353E00CBC1A1 /* Article.swift */,
 				3C2F62242567CBE900AFD31E /* Model.swift */,
+				3CBD2DFB25B5EC9700DB1295 /* SupportFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				3C52101225552A1C00ED9196 /* ThirdViewController.swift in Sources */,
 				3C2F62252567CBE900AFD31E /* Model.swift in Sources */,
 				3CC12866259C9D4B0041C6F2 /* NewsView.swift in Sources */,
+				3CBD2DFC25B5EC9700DB1295 /* SupportFile.swift in Sources */,
 				3CB7462625506455005FA2A1 /* SceneDelegate.swift in Sources */,
 				3C21D09525ADA186001B978D /* PhotoZoomView.swift in Sources */,
 				3C5471D02572A99200DAAAFF /* AlbumsTableViewCell.swift in Sources */,

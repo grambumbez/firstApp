@@ -9,8 +9,6 @@ import UIKit
 
 class AlbumsTableViewController: UITableViewController {
     
-    let array = [Albums(imgAlbum: catPhoto.first ?? "🐱", nameAlbums: "Альбом кошек"), Albums(imgAlbum: dogPhoto.first ?? "🐶", nameAlbums: "Альбом собак")]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

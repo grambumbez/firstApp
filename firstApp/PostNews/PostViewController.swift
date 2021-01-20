@@ -29,8 +29,8 @@ class PostViewController: UITableViewController {
         let article = newsResponse?.articles[indexPath.row]
         cell.nameLabel.text = article?.title
         cell.authorLabel.text = article?.author
-        if let test = URL(string: article?.urlToImage ?? "No Photo") {
-            if let data = try? Data(contentsOf: test) {
+        if let urlImage = URL(string: article?.urlToImage ?? "No Photo") {
+            if let data = try? Data(contentsOf: urlImage) {
                 let img = UIImage(data: data)
                 cell.postImageView.image = img
                 cell.postImageView.layer.cornerRadius = 5
